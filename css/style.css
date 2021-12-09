@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    font-family: Corbel;
+}
+
+html{
+    height: 130%;
+    background-color: whitesmoke;
+}
+
+nav{
+    height: 100px;
+    width: 100%;
+    background-color: whitesmoke;
+    position: fixed;
+    z-index: 10;
+    /*border-bottom: #143648 solid;*/
+}
+
+.menuItems{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 34px 8px;
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: #143648;
+    margin: 12px;
+    font-size: x-large;
+}
+
+a.submitText{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+
+.logo{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 24px 8px;
+}
+
+.menuIcon{
+    height: 100%;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.bar{
+    height: 6px;
+    width: 80%;
+    background-color: #143648;
+}
+
+.menu{
+    position: fixed;
+    top: 100px;
+    right: -160px;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    min-height: 150px;
+    transition: 0.125s;
+    border-style: solid;
+    border-color: #143648;
+    z-index: 10;
+}
+
+.wrapper{
+    box-sizing: border-box;
+    padding-top: 102px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.splash{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    text-align: center;
+}
+
+.splashimg{
+    width: 100%;
+    height: 300px;
+}
+
+.splashheader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, .8);
+    padding: 32px;
+}
+
+.information{
+    width: 500px;
+    /*height: 100px;*/
+    float: left;
+    margin-top: 24px;
+    border: #143648 solid 2px;
+    padding: 16px;
+    flex-basis: 40%;
+}
+
+.topfabrics, .aboutphoto,{
+    margin-top: 24px;
+    flex-basis: 40%;
+    color: #143648;
+}
+
+.aboutphoto{
+    width: 40%;
+    position: relative;
+    text-align: center;
+}
+
+.fabrics, .productsV, .productsP, .productsN, .productsC{
+    float: left;
+    margin-top: 24px;
+    /*border: #143648 solid 2px;*/
+    padding-right: 8px;
+    position: relative;
+    text-align: center;
+}
+
+.productsV, .productsP, .productsN, .productsC{
+    width: 400px;
+    cursor: pointer;
+}
+
+.productimg{
+    height: 300px;
+    width: 300px;
+}
+
+.fabricimg{
+    opacity: 0.5;
+    height: 200px;
+    width: 200px;
+}
+
+.fabricimg:hover{
+    opacity: 1.0;
+}
+
+.fabrictext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.contactBox{
+    color: #143648;
+    width: 500px;
+    float: left;
+    margin-top: 24px;
+    padding: 16px;
+    flex-basis: 40%;
+}
+
+.contactBoxField{
+    padding: 8px 0px;
+}
+
+.textBox, .textBoxLarge{
+    width: 500px;
+    height: 24px;
+    border: #143648 solid 2px;
+    margin-top: 8px;
+}
+
+.textBoxLarge{
+    height: 72px;
+}
+
+.btnSubmit{
+    background-color: #e15e15;
+    width: 96px;
+    margin-top: 24px;
+    text-align: center;
+    padding: 8px;
+}
+
+.socialMedia{
+    padding-top: 16px;
+}
+
+p{
+    font-size: large;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.popupV, .popupP, .popupN, .popupC{
+    width: 75%;
+    /*height: 300px;*/
+    border: #143648 4px solid;
+    right: -1500000px;
+    position: fixed;
+    top: 30%;
+    background-color: #143648;
+    min-height: 300px;
+    transition: 0s;
+    z-index: 10;
+}
+
+.popupVText, .popupPText, .popupNText, .popupCText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding-top: 24px;
+    color: white;
+}
+
+.exitV, .exitP, .exitN, .exitC{
+    float: right;
+    width: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #143648;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+}
+
+@media screen and (min-width: 800px) {
+    .menuItems{
+        display: block;
+    }
+    .menuIcon, .menu
+    {
+        display: none;
+    }
+    .wrapper{
+        flex-direction: row;
+    }
+}
